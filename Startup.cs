@@ -40,6 +40,8 @@ namespace vacation
             services.AddScoped<IDbConnection>(x => CreateDbConnection());
             services.AddTransient<VacationService>();
             services.AddTransient<VacationRepository>();
+            services.AddTransient<CruisesService>();
+            services.AddTransient<CruisesRepository>();
         }
 
         private IDbConnection CreateDbConnection()
